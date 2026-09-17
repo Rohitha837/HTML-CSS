@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     header{
+        background: #1e293b;
+        color: white;
+        padding: 20px;
+        border-radius: 15px;
+}
+ aside {
+  background: #1e293b;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+}
+.sidebar-item {
+  transition: 0.3s;
+}
+.sidebar-item:hover {
+  transform: translateX(5px);
+}
+        .dashboard {
+  display: grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
+  grid-template-areas:
+    "header header"
+    "sidebar  main"
+    "footer  footer";
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+.card {
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}.card {
+  padding: 20px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+main {
+  grid-area: main;
+  padding: 20px;
+}
+.progress {
+  background: #e5e7eb;
+  height: 20px;
+  border-radius: 10px;
+}
+footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 15px;
+}
+
+</style>
+</head>
+<body>
+    <div class="dashboard">
+  <header>✨ My Dashboard</header>
+
+  <aside>📚 Sidebar</aside>
+
+  <main>🚀 Main Content</main>
+
+  <footer>Made with CSS Grid 💙</footer>
+</div>
+<div class="cards">
+  <div class="card">🐍 Python</div>
+  <div class="card">🎨 CSS</div>
+  <div class="card">🤖 AI</div>
+</div>
+<div class="progress">
+  <div class="progress-bar">85%</div>
+</div>
+</body>
+</html>

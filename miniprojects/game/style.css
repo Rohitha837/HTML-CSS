@@ -1,17 +1,91 @@
 h1 {
-color: blue;
+    text-align: center;
+    color: rgb(16, 75, 203);
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 p {
-color: green;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    color: green;
 }
 
-button {
-color: white;
-background-color: purple;
-width: 200px;
-height: 50px;
-padding: 15px;
-margin: 20px;
-border:2px solid black;
+.game-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background-color: rgb(5, 57, 155);
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px gray;
+    box-sizing: border-box;
+}
+.start-btn,
+.login-btn,
+.register-btn {
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    border-radius: 10px;
+    height: 50px;
+    border:none ;
+    color: aliceblue;
+    font-size: 16px;
+    box-shadow: 2px 2px 5px gray;
+}
+.start-btn{
+    background-color: rgb(241, 81, 131);
+}
+
+.login-btn {
+    background-color: rgb(217, 230, 103);
+}
+
+.register-btn {
+    background-color: rgb(103, 230, 207);
+}
+
+.start-btn:hover {
+    background-color: rgb(45, 177, 222);
+    transform: scale(1.05);
+}
+
+.login-btn:hover {
+    background-color: rgb(45, 177, 222);
+    transform: scale(1.05);
+}
+
+.register-btn:hover {
+    background-color: rgb(45, 222, 57);
+    transform: scale(1.05);
+}
+.game-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 15px;
+}
+.game {
+    padding: 20px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    .game-card {
+        width: 90%;
+        padding: 20px;
+        height: auto;
+        gap: 100px;
+    }
+
+    .start-btn,
+    .login-btn,
+    .register-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
 }
