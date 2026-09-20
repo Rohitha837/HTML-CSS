@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combination Selector</title>
+    <style>
+        .container p{
+            color: red;
+            font-size: 20px;
+        }
+        .container div p{
+            color: blue;
+            font-size: 30px;
+        }
+        .child > p {
+            color: green;
+            font-size: 25px;
+        }
+        .sibling div + p{
+            color: orange;
+            font-size: 25px;
+            font-style: italic;
+        }  
+        .generalsibling div ~ p{
+            color: purple;
+            font-size: 25px;
+            font-style: italic;
+        } 
+
+    </style>
+</head>
+<body>
+    <h1>Combination Selector</h1>
+    <h2>
+        descendant selector
+    </h2>
+    <div class="container">
+        <p>This is a paragraph element.</p>
+        <div>
+        <p>This is a paragraph element.</p>
+        </div>
+        <p>This is a paragraph element.</p>
+    </div>
+    <h2>
+        child selector  
+    </h2>
+    <div class="child">
+        <p>This is a paragraph element.</p>
+        <div>
+        <p>This is a paragraph element.</p>
+        </div>
+        <p>This is a paragraph element.</p>
+    </div>
+<h2>
+    adjacent sibling selector       
+</h2>
+    <div class="sibling">
+        <p>This is a paragraph element.</p>
+    <div>
+        <p>This is a paragraph element.</p>
+    </div>
+        <p>This is a paragraph element.</p>
+        <p>This is a paragraph element.</p>
+    </div>
+<h2>
+    general sibling selector
+</h2>
+    <div class=" generalsibling">
+        <p>This is a paragraph element.</p>
+    <div>
+        <p>This is a paragraph element.</p>
+    </div>
+        <p>This is a paragraph element.</p>
+        <p>This is a paragraph element.</p>
+    </div>    
+</body>
+</html>

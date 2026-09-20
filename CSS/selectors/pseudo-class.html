@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pseudo-Class Example</title>
+
+  <style>
+    /* Link pseudo-classes */
+    a:link {
+      color: blue;
+    }
+
+    a:visited {
+      color: purple;
+    }
+
+    a:hover {
+      color: red;
+    }
+
+    a:active {
+      color: green;
+    }
+
+    /* Input pseudo-class */
+    input:focus {
+      border: 2px solid blue;
+      background-color: lightyellow;
+    }
+
+    /* Button pseudo-class */
+    button:hover {
+      background-color: black;
+      color: white;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    /* Child pseudo-classes */
+    li:first-child {
+      color: red;
+    }
+
+    li:last-child {
+      color: green;
+    }
+
+    li:nth-child(2) {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>CSS Pseudo-Class Example</h1>
+
+  <a href="https://example.com">Visit Website</a>
+
+  <br><br>
+
+  <input type="text" placeholder="Click here">
+
+  <br><br>
+
+  <button>Click Me</button>
+
+  <h2>My Skills</h2>
+
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+</body>
+</html>
