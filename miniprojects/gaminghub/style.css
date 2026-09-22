@@ -1,0 +1,289 @@
+/* =========================
+   1. GLOBAL STYLES
+========================= */
+.nexora{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-end;
+    font-size: 50px;
+}
+:root {
+    --accent: #00e5ff;
+    --dark: #111;
+    --card: #1a1a1a;
+    --text: white;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--dark);
+    color: var(--text);
+}
+
+
+/* =========================
+   2. HEADER / NAVBAR
+========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #1a1a1a;
+}
+
+header h1 {
+    color: var(--accent);
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================
+   3. BUTTONS
+========================= */
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   4. HERO SECTION
+========================= */
+
+.hero {
+    min-height: 450px;
+    padding: 70px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #111,
+        #1b1b3a
+    );
+}
+
+.hero h2 {
+    color: var(--accent);
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.hero button {
+    background-color: var(--accent);
+    color: #111;
+    font-weight: 700;
+}
+
+.hero button:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   5. GENERAL SECTIONS
+========================= */
+
+section {
+    padding: 70px 50px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   6. FEATURED GAMES
+========================= */
+
+.featured-games {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.featured-games h2 {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================
+   7. GAME CARDS
+========================= */
+
+.game-card {
+    background-color: var(--card);
+    padding: 25px;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+
+    transition: 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+}
+
+.game-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.game-card p {
+    margin-bottom: 20px;
+}
+
+.game-card button {
+    background-color: var(--accent);
+    color: #111;
+}
+
+
+/* =========================
+   8. WHY NEXORA
+========================= */
+
+section:nth-of-type(3) {
+    background-color: #161616;
+}
+
+section:nth-of-type(3) div {
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+}
+
+section:nth-of-type(3) h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   9. CTA SECTION
+========================= */
+
+section:nth-of-type(4) {
+    background-color: #1b1b3a;
+}
+
+section:nth-of-type(4) p {
+    margin-bottom: 20px;
+}
+
+section:nth-of-type(4) button {
+    background-color: var(--accent);
+    color: #111;
+}
+
+
+/* =========================
+   10. FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #0a0a0a;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* =========================
+   11. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+        min-height: 400px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+
+    .featured-games {
+        grid-template-columns: 1fr;
+    }
+
+    section:nth-of-type(3) div {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
